@@ -1,0 +1,28 @@
+{
+  "name": "Express-Graceful-Shutdown-Example",
+  "version": "1.0.0",
+  "description": "Show how to graceful shutdown a express process.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VeejaLiu/Express-Graceful-Shutdown-Example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^17.0.31",
+    "express": "^4.16.3",
+    "node-fetch": "^2.1.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.6"
+  },
+  "bugs": {
+    "url": "https://github.com/VeejaLiu/Express-Graceful-Shutdown-Example/issues"
+  },
+  "homepage": "https://github.com/VeejaLiu/Express-Graceful-Shutdown-Example#readme"
+}
