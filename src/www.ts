@@ -10,11 +10,11 @@ app.post('/test', async (req, res) => {
     const {i} = req.body;
 
     // Request received
-    console.log(`[${i}->`);
+    console.log(`[${new Date().toISOString()}][${i} -> Received]`);
 
     // After five seconds, a response will be returned
     await setTimeout(async function () {
-      console.log(`${i}]`);
+      console.log(`[${new Date().toISOString()}][${i}] -> Done!!!`);
       res.send(`${i}`).status(201);
     }, 5000);
 

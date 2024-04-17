@@ -24,9 +24,9 @@ async function main() {
   for (let i = 0; i < 1000; i++) {
     await sleep(1000);
     getResult(i).then(() => {
-      console.log(`${i} Done!!!`);
+      console.log(`[${new Date().toISOString()}] ${i} Done!!!`);
     }).catch((e)=>{
-      console.error(`${i} Error!!!`);
+      console.error(`[${new Date().toISOString()}] ${i} Error!!!`);
     });
   }
 }
