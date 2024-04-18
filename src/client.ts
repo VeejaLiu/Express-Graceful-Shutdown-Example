@@ -17,16 +17,21 @@ async function getResult(i) {
     },
     body: JSON.stringify({i: i}),
   };
-  await node_fetch(url, options);
+  return await node_fetch(url, options);
 }
 
 async function main() {
   for (let i = 0; i < 1000; i++) {
     await sleep(1000);
-    getResult(i).then(() => {
-      console.log(`[${new Date().toISOString()}] ${i} Done!!!`);
-    }).catch((e)=>{
-      console.error(`[${new Date().toISOString()}] ${i} Error!!!`);
+    console.log(`[${new Date().toISOString()}][INFO] ${i} ...`);
+    getResult(i).then((res) => {
+      if (res.status !== 200) {
+        console.error(`[${new Date().toISOString()}][ERROR] ${i} Error!!!`);
+      } else {
+        console.log(`[${new Date().toISOString()}][INFO] ${i} Done!!!`);
+      }
+    }).catch((e) => {
+      console.error(`[${new Date().toISOString()}][ERROR] ${i} Error!!!`);
     });
   }
 }
